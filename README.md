@@ -1,7 +1,7 @@
 # form-validation-js-jquery
 
 There are two complete simple websites (1 page each) in this repository. To
-use any of them, place the files from any one of the folders in the root of
+use either of them, place the files from either of the folders in the root of
 your local project or in your public_html directory and load the index.html
 page in your browser.
 
