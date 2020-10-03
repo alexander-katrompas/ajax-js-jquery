@@ -1,0 +1,33 @@
+/*
+  This is the CSS for mobile devices. i.e. it is mobile-first
+*/
+
+#form-div {
+    margin: 10px auto;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.input-div {
+    margin-bottom: 10px;
+}
+
+.form-container{
+    text-align: center;
+    margin: 50px auto;
+    width: 100%;
+}
+
+
+/*
+    This is the code for desktop devices. i.e. it is desktop-second
+    This applies from 600px onwards
+*/
+@media (min-width: 600px) {
+    .form-container{
+        width: 60%;
+    }
+
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- style sheets and favicons go here, in the head -->
+        <link href="main.css" rel="stylesheet">
+        <link rel="icon" href="favicon.gif" type="image/gif">
+    </head>
+    <body>
+        <div class="form-container">
+            <div id="msg">
+                <!-- This is a blank area for us to talk to the use -->
+                <br>
+            </div>
+            <div id="form-div">
+                <!-- notice the form attributes, you do NOT need method or action -->
+                <form id="names-form" name="names-form">
+                    <div class="input-div">
+                        <input type="text" class="form-input" id="first-name" name="fname" placeholder="First Name" maxlength="64" value="">
+                    </div>
+                    <div class="input-div">
+                        <input type="text" class="form-input" id="last-name" name="lname" placeholder="Last Name" maxlength="64" value="">
+                    </div>
+                </form>
+            </div>
+            <div>
+                <!-- These are not HTML submit and clear buttons. They are generic buttons to which
+                we will attach handlers to make them work as submit and clear buttons.
+                Notice they are outside the form. -->
+                <button id="names-send" type="button" class="">Send</button>&nbsp;&nbsp;
+                <button id="names-clear" type="button" class="">Clear</button>
+            </div>
+        </div>
+        <!-- jQuery must be loaded before any other JS that uses jQuery -->
+        <script src="jquery.min.js"></script>
+        <!-- Place your JS at the bottom of the body like so -->
+        <script src="main.js"></script>
+    </body>
+</html>
