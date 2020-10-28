@@ -11,6 +11,11 @@ function clearForm() {
 }
 
 function sendData(fname, lname) {
+    /* notice in this version I'm sending the strings in as parameters, but I
+     * could have also skipped that and used the whole form like in the
+     * raw JS version. You can do either method in either way.
+     */
+
     //bring the message area in to report errors or "Sent!"
     let msgArea = document.getElementById("msg");
 
