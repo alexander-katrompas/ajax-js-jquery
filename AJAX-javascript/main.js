@@ -13,7 +13,8 @@ function clearForm() {
     document.getElementById("msg").innerHTML = "<br>";
 }
 
-function sendData(fname, lname){
+
+function sendData(){
     //bring the message area in to report errors or "Sent!"
     let msgArea = document.getElementById("msg");
 
@@ -21,6 +22,10 @@ function sendData(fname, lname){
     const XHR = new XMLHttpRequest();
     
     // bring the form in
+    /* in this case notice I'm bringing the whole form in, but I could have also
+     * just passed the fname and lname directly and sent those. the jQuery
+     * version show that way of doing it, but you could do it here too.
+     */
     let formData = new FormData(document.getElementById("names-form"));
 
     /*
@@ -34,7 +39,7 @@ function sendData(fname, lname){
             clearForm();
             msgArea.innerHTML = "Sent!";
         } else {
-            msgArea.innerHTML = "Error";
+            msgArea.innerHTML = "Processing Error";
         }
     });
 
@@ -44,7 +49,7 @@ function sendData(fname, lname){
      */
     XHR.addEventListener('error', function (event) {
         if (XHR.statusText !== "OK") {
-            msgArea.innerHTML = "Error";
+            msgArea.innerHTML = "Server Error";
         }
     });
 
@@ -86,7 +91,7 @@ function validate() {
     if(message === ""){
         // no errors, so send the data to the server
         console.log("calling ajax");
-        sendData(fname, lname);
+        sendData();
     } else {
         // report errors if there are any
         console.log("errors");
@@ -113,5 +118,4 @@ clearBtn.onclick = function () {
     //call clear if the button is pressed
     clearForm();
 };
-
 
